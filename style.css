@@ -1,0 +1,113 @@
+/* Page Fade Animation */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    text-align: center;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    overflow-x: hidden;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+/* Navigation */
+nav {
+    background: white;
+    padding: 15px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff4d6d;
+}
+
+nav a:hover {
+    color: #e63950;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+}
+
+h1 {
+    color: #ff4d6d;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 650px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background: #ff4d6d;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #e63950;
+}
+
+/* Footer */
+footer {
+    background: white;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    color: #ff4d6d;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Aesthetic Name */
+.name-style {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    background: linear-gradient(to right, #ff4d6d, #ff758c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+/* Quote */
+.love-quote {
+    font-size: 22px;
+    font-style: italic;
+    margin-top: 20px;
+    color: #ff4d6d;
+}
