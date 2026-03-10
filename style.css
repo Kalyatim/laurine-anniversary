@@ -6,14 +6,19 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #000000, #1a0000, #330000);
-    color: #f5f5f5;
-    min-height: 100vh;
-    overflow-x: hidden;
-    opacity: 0;
-    transition: opacity 0.8s ease;
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+
+background:linear-gradient(
+135deg,
+var(--lavender),
+var(--champagne)
+);
+
+color:#4b3a3a;
+
+overflow-x:hidden;
 }
 
 body.fade-in {
@@ -21,15 +26,29 @@ body.fade-in {
 }
 
 /* Navbar */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 20px;
-    background: rgba(0,0,0,0.9);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+nav{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:20px;
+
+background:rgba(181,131,141,0.6);
+backdrop-filter:blur(8px);
+
+position:sticky;
+top:0;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+font-size:18px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:var(--champagne);
 }
 
 nav a {
@@ -54,15 +73,20 @@ section {
 }
 
 /* Card */
-.card {
-    background: rgba(20, 0, 0, 0.75);
-    padding: 40px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 800px;
-    box-shadow: 0 0 40px rgba(255, 0, 0, 0.3);
-    border: 1px solid rgba(255, 0, 0, 0.3);
-    transition: 0.4s ease;
+.card{
+background:rgba(247,231,206,0.6);
+
+padding:40px;
+margin:40px auto;
+
+width:80%;
+max-width:900px;
+
+border-radius:20px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 .gallery{
@@ -76,9 +100,18 @@ margin-top:30px;
 width:100%;
 height:250px;
 object-fit:cover;
-border-radius:12px;
+
+border-radius:15px;
+
 transition:0.4s;
-box-shadow:0 0 15px rgba(255,0,0,0.4);
+
+box-shadow:0 5px 20px rgba(181,131,141,0.5);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+
+box-shadow:0 10px 40px rgba(220,174,150,0.8);
 }
 
 .gallery img:hover{
@@ -139,11 +172,14 @@ button:hover {
     color: #ff4d4d;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #000;
-    color: #777;
+footer{
+text-align:center;
+padding:20px;
+
+background:var(--mauve);
+color:white;
+
+margin-top:40px;
 }
 
 /* Floating hearts */
@@ -210,4 +246,11 @@ background-size:cover;
 background-position:center;
 background-attachment:fixed;
 min-height:100vh;
+}
+
+:root{
+--dusty-rose:#DCAE96;
+--lavender:#E6DEFF;
+--champagne:#F7E7CE;
+--mauve:#B5838D;
 }
