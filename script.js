@@ -41,4 +41,16 @@ function createHeart() {
     setTimeout(() => heart.remove(), 6000);
 }
 
+function openImage(img){
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
+
+lightbox.style.display="flex";
+lightboxImg.src=img.src;
+}
+
+function closeImage(){
+document.getElementById("lightbox").style.display="none";
+}
+
 setInterval(createHeart, 700);
