@@ -54,3 +54,77 @@ document.getElementById("lightbox").style.display="none";
 }
 
 setInterval(createHeart, 700);
+
+const reasons = [
+
+"Your smile brightens my darkest days",
+"The way you laugh makes the world lighter",
+"You understand me in ways no one else does",
+"Your kindness touches everyone around you",
+"The warmth of your heart",
+"The way you support my dreams",
+"Our late night conversations",
+"How peaceful life feels when I am with you",
+"The way you look at me",
+"Your beautiful soul",
+"The memories we keep creating",
+"The way you make ordinary days magical",
+"Your patience with me",
+"How you inspire me to be better",
+"The way you care so deeply",
+"The comfort of your presence",
+"The love you show in the smallest things",
+"Because with you, life feels right",
+"Because my heart feels at home with you",
+"Because loving you feels natural"
+
+];
+
+let index = 0;
+const box = document.getElementById("reasonBox");
+
+function showReason(){
+
+box.style.opacity = 0;
+
+setTimeout(() => {
+
+box.textContent = reasons[index];
+box.style.opacity = 1;
+
+index++;
+
+if(index >= reasons.length){
+index = 0;
+}
+
+},1000);
+
+}
+
+setInterval(showReason,4000);
+
+showReason();
+
+
+/* floating hearts */
+
+function createHeart(){
+
+const heart = document.createElement("div");
+heart.classList.add("heart");
+
+heart.innerHTML="💖";
+
+heart.style.left = Math.random()*100 + "vw";
+heart.style.fontSize = (15 + Math.random()*20) + "px";
+
+document.querySelector(".hearts").appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+setInterval(createHeart,500);
