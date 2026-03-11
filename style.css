@@ -254,3 +254,37 @@ min-height:100vh;
 --champagne:#F7E7CE;
 --mauve:#B5838D;
 }
+
+.reasons-container{
+height:80vh;
+overflow:hidden;
+text-align:center;
+position:relative;
+}
+
+.reasons-container h1{
+margin-bottom:40px;
+color:#B5838D;
+}
+
+.reasons-scroll{
+position:absolute;
+width:100%;
+animation:scrollReasons 40s linear infinite;
+}
+
+.reasons-scroll p{
+font-size:22px;
+margin:20px 0;
+color:#4b3a3a;
+}
+
+@keyframes scrollReasons{
+0%{
+transform:translateY(100%);
+}
+
+100%{
+transform:translateY(-120%);
+}
+}
