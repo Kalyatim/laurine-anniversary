@@ -1,3 +1,13 @@
+:root{
+
+--deep-purple:#4B2C83;
+--royal-purple:#6A4C93;
+--lavender:#CDB4FF;
+--sky-blue:#A0C4FF;
+--midnight:#1A1A40;
+
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap');
 
 * {
@@ -25,42 +35,38 @@ body.fade-in {
     opacity: 1;
 }
 
-/* Navbar */
 nav{
+
 display:flex;
 justify-content:center;
 gap:40px;
-padding:20px;
 
-background:rgba(181,131,141,0.6);
+padding:18px;
+
+background:rgba(26,26,64,0.85);
 backdrop-filter:blur(8px);
 
 position:sticky;
 top:0;
+
 }
 
 nav a{
+
 text-decoration:none;
-color:white;
+color:var(--lavender);
 font-weight:bold;
 font-size:18px;
+
 transition:0.3s;
+
 }
 
 nav a:hover{
-color:var(--champagne);
-}
 
-nav a {
-    text-decoration: none;
-    color: #ff4d4d;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
+color:var(--sky-blue);
+transform:scale(1.1);
 
-nav a:hover {
-    color: white;
-    text-shadow: 0 0 10px red;
 }
 
 /* Layout */
