@@ -356,3 +356,38 @@ opacity:0;
 }
 
 }
+
+.cinema-section{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+
+background:
+linear-gradient(rgba(0,0,0,0.55), rgba(181,131,141,0.6)),
+url("memories/memory (4).jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+}
+
+.cinema-section h1{
+margin-bottom:40px;
+font-size:38px;
+color:#F7E7CE;
+text-shadow:0 0 10px rgba(0,0,0,0.6);
+}
+
+#reasonBox{
+font-size:30px;
+max-width:750px;
+opacity:0;
+transition:opacity 1.5s;
+text-shadow:0 0 15px rgba(0,0,0,0.7);
+}

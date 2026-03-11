@@ -55,28 +55,30 @@ document.getElementById("lightbox").style.display="none";
 
 setInterval(createHeart, 700);
 
+document.addEventListener("DOMContentLoaded", function(){
+
 const reasons = [
 
 "Your smile brightens my darkest days",
-"The way you laugh makes the world lighter",
-"You understand me in ways no one else does",
-"Your kindness touches everyone around you",
-"The warmth of your heart",
-"The way you support my dreams",
-"Our late night conversations",
-"How peaceful life feels when I am with you",
+"The way you laugh fills my heart with joy",
+"You understand me like no one else",
+"Your kindness to everyone around you",
+"The peace I feel when I am with you",
 "The way you look at me",
+"Our endless late night conversations",
+"The warmth of your heart",
 "Your beautiful soul",
+"The way you care about the little things",
+"The comfort of your presence",
+"How you support my dreams",
 "The memories we keep creating",
-"The way you make ordinary days magical",
 "Your patience with me",
 "How you inspire me to be better",
-"The way you care so deeply",
-"The comfort of your presence",
-"The love you show in the smallest things",
-"Because with you, life feels right",
-"Because my heart feels at home with you",
-"Because loving you feels natural"
+"The love you show so naturally",
+"The happiness you bring into my life",
+"The way you make ordinary days special",
+"The future I see with you",
+"And simply because you are you"
 
 ];
 
@@ -87,7 +89,7 @@ function showReason(){
 
 box.style.opacity = 0;
 
-setTimeout(() => {
+setTimeout(function(){
 
 box.textContent = reasons[index];
 box.style.opacity = 1;
@@ -106,25 +108,4 @@ setInterval(showReason,4000);
 
 showReason();
 
-
-/* floating hearts */
-
-function createHeart(){
-
-const heart = document.createElement("div");
-heart.classList.add("heart");
-
-heart.innerHTML="💖";
-
-heart.style.left = Math.random()*100 + "vw";
-heart.style.fontSize = (15 + Math.random()*20) + "px";
-
-document.querySelector(".hearts").appendChild(heart);
-
-setTimeout(()=>{
-heart.remove();
-},6000);
-
-}
-
-setInterval(createHeart,500);
+});
